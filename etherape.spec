@@ -63,7 +63,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
-	Developmentdir=%{_applnkdir}/Network/Misc
+	Developmentdir=%{_applnkdir}/Network/Misc \
+	pixmapsdir="%{_pixmapsdir}"
 
 %find_lang %{name}
 
@@ -75,6 +76,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog NEWS README FAQ README.help README.bugs README.thanks
 %attr(755,root,root) %{_sbindir}/*
 %{_datadir}/etherape
+%{_datadir}/gnome/help/*
 %{_mandir}/man?/*
 %{_applnkdir}/Network/Misc/*
 %{_pixmapsdir}/*
