@@ -2,24 +2,21 @@ Summary:	Graphical network viewer modeled after etherman
 Summary(pl):	Graficzny monitor sieci
 Summary(pt_BR):	Visualizador gráfico de redes modelado como o etherman
 Name:		etherape
-Version:	0.8.2
-Release:	3
+Version:	0.9.0
+Release:	1
 License:	GPL
 Group:		Applications/Networking
 Source0:	http://dl.sourceforge.net/etherape/%{name}-%{version}.tar.gz
-# Source0-md5:	30244b1e4d24f7e1154d789002caa1e9
+# Source0-md5:	a712f4cb04897d1a02ce988cffbf254c
 URL:		http://etherape.sourceforge.net/
-BuildRequires:	autoconf
-BuildRequires:	automake
 BuildRequires:	gettext-devel
-BuildRequires:	gnome-libs-devel
-BuildRequires:	gtk+-devel
-BuildRequires:	libglade-gnome-devel
+BuildRequires:	gtk+2-devel
+BuildRequires:	libgnomeui-devel
 BuildRequires:	libpcap-devel
 BuildRequires:	libtool
+Requires:	gtk+2
+Requires:	libgnomeui
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define		_sbindir	%{_bindir}
 
 %description
 Etherape is a graphical network monitor for Unix modeled after
@@ -48,12 +45,11 @@ ethernet, ppp e slip.
 
 %build
 rm -f missing
-%{__libtoolize}
-%{__gettextize}
-%{__aclocal} -I macros
-%{__autoconf}
-%{__automake}
-CFLAGS="%{rpmcflags} `libglade-config --cflags`"
+#%%{__libtoolize}
+#%%{__gettextize}
+#%%{__aclocal} -I m4
+#%%{__autoconf}
+#%%{__automake}
 %configure
 %{__make}
 
@@ -62,8 +58,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
-	Developmentdir=%{_applnkdir}/Network/Misc \
-	pixmapsdir="%{_pixmapsdir}"
+	Developmentdir=%{_desktopdir}
+#	pixmapsdir="%{_pixmapsdir}"
+
+echo "Categories=Application;Network;" >> \
+	$RPM_BUILD_ROOT%{_desktopdir}/etherape.desktop
 
 %find_lang %{name}
 
@@ -72,10 +71,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README FAQ README.help README.bugs README.thanks
-%attr(755,root,root) %{_sbindir}/*
+%doc A* Ch* F* N* R* R* T*
+%attr(755,root,root) %{_bindir}/etherape
 %{_datadir}/etherape
-%{_datadir}/gnome/help/*
-%{_mandir}/man?/*
-%{_applnkdir}/Network/Misc/*
-%{_pixmapsdir}/*
+%{_mandir}/man1/etherape.1.gz
+%{_desktopdir}/etherape.desktop
+%{_pixmapsdir}/etherape.png
