@@ -7,6 +7,7 @@ Release:	3
 License:	GPL
 Group:		Applications/Networking
 Source0:	http://dl.sourceforge.net/etherape/%{name}-%{version}.tar.gz
+# Source0-md5:	30244b1e4d24f7e1154d789002caa1e9
 URL:		http://etherape.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
