@@ -45,6 +45,7 @@ gettextize --copy --force
 aclocal -I macros
 autoconf
 automake -a -c -f
+CFLAGS="%{rpmcflags} -I /usr/X11R6/include/libglade-1.0"
 %configure
 %{__make}
 
