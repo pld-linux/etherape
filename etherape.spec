@@ -1,5 +1,6 @@
 Summary:	Graphical network viewer modeled after etherman
 Summary(pl):	Graficzny monitor sieci
+Summary(pt_BR):	Visualizador gráfico de redes modelado como o etherman
 Name:		etherape
 Version:	0.8.2
 Release:	1
@@ -36,10 +37,18 @@ zmienij± rozmiar wraz z ruchem. Protokó³y obrazowane za pomoc±
 kolorów. Obs³uga urz±dzeñ ethernet, ppp i slip. Mo¿e filtrowaæ ruch
 jaki pokazuje, czytaæ z pliku lub bezpo¶rednio z sieci.
 
+%description -l pt_BR
+O etherape é um monitor gráfico de redes modelado como o etherman.
+Contém modos ether, ip e tcp, mostrando de forma gráfica a atividade
+da rede: Máquinas e conexões mudam em tamanho como o tráfego e os
+protocolos são codificados por cores. O Etherape suporta dispositivos
+ethernet, ppp e slip.
+
 %prep
 %setup -q
 
 %build
+rm -f missing
 libtoolize --copy --force
 gettextize --copy --force
 aclocal -I macros
