@@ -51,7 +51,7 @@ ethernet, ppp e slip.
 rm -f missing
 %{__libtoolize}
 %{__gettextize}
-aclocal -I macros
+%{__aclocal} -I macros
 %{__autoconf}
 %{__automake}
 CFLAGS="%{rpmcflags} -I /usr/X11R6/include/libglade-1.0"
