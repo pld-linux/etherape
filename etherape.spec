@@ -4,9 +4,11 @@ Version:	0.5.6
 Release:	1
 License:	GPL
 Group:		Applications/Networking
+Group(de):	Applikationen/Netzwerkwesen
 Group(pl):	Aplikacje/Sieciowe
 Source0:	ftp://download.sourceforge.net/pub/sourceforge/etherape/%{name}-%{version}.tar.gz
-Patch0:		etherape-DESTDIR.patch
+Patch0:		%{name}-DESTDIR.patch
+Patch1:		%{name}-resolv.patch
 URL:		http://etherape.sourceforge.net/
 BuildRequires:	automake
 BuildRequires:	gettext-devel
@@ -14,6 +16,9 @@ BuildRequires:	gnome-libs-devel
 BuildRequires:	gtk+-devel
 BuildRequires:	libglade-devel
 BuildRequires:	libpcap-devel
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	gettext-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -31,10 +36,13 @@ a file as well as live from the network.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
-automake
 gettextize --copy --force
+automake -a -c
+aclocal -I macros
+autoconf
 %configure
 %{__make}
 
