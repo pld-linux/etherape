@@ -3,7 +3,7 @@ Summary(pl):	Graficzny monitor sieci
 Summary(pt_BR):	Visualizador gráfico de redes modelado como o etherman
 Name:		etherape
 Version:	0.8.2
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/Networking
 Source0:	ftp://download.sourceforge.net/pub/sourceforge/etherape/%{name}-%{version}.tar.gz
@@ -52,7 +52,7 @@ rm -f missing
 %{__aclocal} -I macros
 %{__autoconf}
 %{__automake}
-CFLAGS="%{rpmcflags} -I /usr/X11R6/include/libglade-1.0"
+CFLAGS="%{rpmcflags} -I /usr/include/libglade-1.0"
 %configure
 %{__make}
 
