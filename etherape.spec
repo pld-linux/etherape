@@ -13,7 +13,7 @@ BuildRequires:	automake
 BuildRequires:	gettext-devel
 BuildRequires:	gnome-libs-devel
 BuildRequires:	gtk+-devel
-BuildRequires:	libglade-devel
+BuildRequires:	libglade-gnome-devel
 BuildRequires:	libpcap-devel
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -65,9 +65,6 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	Developmentdir=%{_applnkdir}/Network/Misc
 
-gzip -9nf AUTHORS ChangeLog NEWS README FAQ README.help README.bugs \
-	README.thanks
-
 %find_lang %{name}
 
 %clean
@@ -75,7 +72,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc *.gz
+%doc AUTHORS ChangeLog NEWS README FAQ README.help README.bugs README.thanks
 %attr(755,root,root) %{_sbindir}/*
 %{_datadir}/etherape
 %{_mandir}/man?/*
