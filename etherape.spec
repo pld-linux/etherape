@@ -21,12 +21,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_sbindir	%{_bindir}
 
 %description
-Etherape is a graphical network monitor for Unix modeled after etherman.
-Featuring ether, ip and tcp modes, it displays network activity
-graphically. Hosts and links change in size with traffic. Color coded
-protocols display. It supports ethernet, ppp and slip devices. It can
-filter traffic to be shown, and can read traffic from a file as well as
-live from the network.
+Etherape is a graphical network monitor for Unix modeled after
+etherman. Featuring ether, ip and tcp modes, it displays network
+activity graphically. Hosts and links change in size with traffic.
+Color coded protocols display. It supports ethernet, ppp and slip
+devices. It can filter traffic to be shown, and can read traffic from
+a file as well as live from the network.
 
 %prep
 %setup -q
