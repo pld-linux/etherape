@@ -53,7 +53,7 @@ rm -f missing
 %{__aclocal} -I macros
 %{__autoconf}
 %{__automake}
-CFLAGS="%{rpmcflags} -I`libglade-config --cflags`"
+CFLAGS="%{rpmcflags} `libglade-config --cflags`"
 %configure
 %{__make}
 
