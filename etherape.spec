@@ -18,6 +18,7 @@ BuildRequires:	libpcap-devel
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+%define		_prefix		/usr/X11R6
 %define		_sbindir	%{_bindir}
 
 %description
@@ -52,7 +53,7 @@ rm -f missing
 %{__aclocal} -I macros
 %{__autoconf}
 %{__automake}
-CFLAGS="%{rpmcflags} -I /usr/include/libglade-1.0"
+CFLAGS="%{rpmcflags} -I`libglade-config --cflags`"
 %configure
 %{__make}
 
