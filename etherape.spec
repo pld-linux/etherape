@@ -3,12 +3,13 @@ Summary(pl):	Graficzny monitor sieci
 Summary(pt_BR):	Visualizador gráfico de redes modelado como o etherman
 Name:		etherape
 Version:	0.9.0
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/Networking
 Source0:	http://dl.sourceforge.net/etherape/%{name}-%{version}.tar.gz
 # Source0-md5:	a712f4cb04897d1a02ce988cffbf254c
 Patch0:		%{name}-bdf_h.patch
+Patch1:		%{name}-desktop.patch
 URL:		http://etherape.sourceforge.net/
 BuildRequires:	gettext-devel
 BuildRequires:	gtk+2-devel
@@ -41,6 +42,7 @@ ethernet, ppp e slip.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__aclocal}
