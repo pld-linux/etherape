@@ -7,7 +7,6 @@ Group:		Applications/Networking
 Group(de):	Applikationen/Netzwerkwesen
 Group(pl):	Aplikacje/Sieciowe
 Source0:	ftp://download.sourceforge.net/pub/sourceforge/etherape/%{name}-%{version}.tar.gz
-Patch0:		%{name}-DESTDIR.patch
 URL:		http://etherape.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -16,7 +15,6 @@ BuildRequires:	gnome-libs-devel
 BuildRequires:	gtk+-devel
 BuildRequires:	libglade-devel
 BuildRequires:	libpcap-devel
-BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -33,12 +31,8 @@ a file as well as live from the network.
 
 %prep
 %setup -q
-%patch0 -p1
-
-touch NEWS
 
 %build
-libtoolize --copy --force
 gettextize --copy --force
 aclocal -I macros
 autoconf
