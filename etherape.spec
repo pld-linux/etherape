@@ -3,18 +3,22 @@ Summary(pl):	Graficzny monitor sieci
 Summary(pt_BR):	Visualizador gráfico de redes modelado como o etherman
 Name:		etherape
 Version:	0.9.0
-Release:	3
+Release:	4
 License:	GPL
 Group:		Applications/Networking
 Source0:	http://dl.sourceforge.net/etherape/%{name}-%{version}.tar.gz
 # Source0-md5:	a712f4cb04897d1a02ce988cffbf254c
 Patch0:		%{name}-bdf_h.patch
 Patch1:		%{name}-desktop.patch
+Patch2:		%{name}-resolv.patch
 URL:		http://etherape.sourceforge.net/
+BuildRequires:	autoconf >= 2.57
+BuildRequires:	automake
 BuildRequires:	gettext-devel
 BuildRequires:	gtk+2-devel
-BuildRequires:	libgnomeui-devel
+BuildRequires:	libgnomeui-devel >= 2.0
 BuildRequires:	libpcap-devel
+BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -43,14 +47,13 @@ ethernet, ppp e slip.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 %{__aclocal}
-%{__libtoolize}
 %{__autoconf}
 %{__autoheader}
 %{__automake}
-
 %configure
 
 %{__make}
@@ -62,9 +65,6 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	pixmapsdir=%{_pixmapsdir} \
 	Developmentdir=%{_desktopdir}
-
-echo "Categories=Application;Network;" >> \
-	$RPM_BUILD_ROOT%{_desktopdir}/etherape.desktop
 
 %find_lang %{name}
 
