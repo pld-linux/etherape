@@ -32,7 +32,7 @@ a file as well as live from the network.
 %description -l pl
 Etherape to graficzny monitor sieci dla uniksów. Ma tryby ether, ip
 oraz tcp, wy¶wietla aktywno¶æ sieci graficznie. Hosty i po³±czenia
-zmienij± rozmiar wraz z ruchem. Protokó³y obrazowane za pomoc±
+zmieniaj± rozmiar wraz z ruchem. Protokó³y obrazowane za pomoc±
 kolorów. Obs³uga urz±dzeñ ethernet, ppp i slip. Mo¿e filtrowaæ ruch
 jaki pokazuje, czytaæ z pliku lub bezpo¶rednio z sieci.
 
