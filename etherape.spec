@@ -14,7 +14,6 @@ BuildRequires:	gnome-libs-devel
 BuildRequires:	gtk+-devel
 BuildRequires:	libglade-devel
 BuildRequires:	libpcap-devel
-BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
