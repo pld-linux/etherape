@@ -50,6 +50,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
+	pixmapsdir=%{_pixmapsdir} \
 	Developmentdir=%{_desktopdir}
 
 echo "Categories=Application;Network;" >> \
