@@ -35,6 +35,8 @@ a file as well as live from the network.
 %setup -q
 %patch0 -p1
 
+touch NEWS
+
 %build
 libtoolize --copy --force
 gettextize --copy --force
