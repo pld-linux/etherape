@@ -5,7 +5,7 @@ Release:	1
 License:	GPL
 Group:		Applications/Networking
 Group(pl):	Aplikacje/Sieciowe
-Source0:	http://download.sourceforge.net/etherape/%{name}-%{version}.tar.gz
+Source0:	ftp://download.sourceforge.net/pub/sourceforge/etherape/%{name}-%{version}.tar.gz
 Patch0:		etherape-DESTDIR.patch
 URL:		http://etherape.sourceforge.net/
 BuildRequires:	automake
