@@ -49,7 +49,7 @@ ethernet, ppp e slip.
 
 %build
 rm -f missing
-libtoolize --copy --force
+%{__libtoolize}
 gettextize --copy --force
 aclocal -I macros
 %{__autoconf}
