@@ -12,6 +12,6 @@
 +Terminal=false
  Type=Application
  Icon=etherape.png
-+Categories=Network
++Categories=GTK;GNOME;Network
 +Encoding=UTF-8
 +# vi: encoding=utf-8
