@@ -38,9 +38,9 @@ a file as well as live from the network.
 %build
 libtoolize --copy --force
 gettextize --copy --force
-automake -a -c
 aclocal -I macros
 autoconf
+automake -a -c
 %configure
 %{__make}
 
