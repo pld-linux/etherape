@@ -6,7 +6,7 @@ Version:	0.8.2
 Release:	3
 License:	GPL
 Group:		Applications/Networking
-Source0:	ftp://download.sourceforge.net/pub/sourceforge/etherape/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/etherape/%{name}-%{version}.tar.gz
 URL:		http://etherape.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
