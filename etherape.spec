@@ -35,7 +35,6 @@ a file as well as live from the network.
 %build
 automake
 gettextize --copy --force
-LDFLAGS="-s"; export LDFLAGS
 %configure
 %{__make}
 
@@ -46,8 +45,7 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT
 
 gzip -9nf AUTHORS ChangeLog NEWS README FAQ README.help README.bugs \
-	README.thanks \
-	$RPM_BUILD_ROOT%{_mandir}/man?/*
+	README.thanks
 
 %find_lang %{name}
 
