@@ -1,6 +1,6 @@
 Summary:	Graphical network viewer modeled after etherman
 Name:		etherape
-Version:	0.7.5
+Version:	0.7.6
 Release:	1
 License:	GPL
 Group:		Applications/Networking
@@ -46,7 +46,8 @@ automake -a -c
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+	DESTDIR=$RPM_BUILD_ROOT \
+	Developmentdir=%{_applnkdir}/Network/Misc
 
 gzip -9nf AUTHORS ChangeLog NEWS README FAQ README.help README.bugs \
 	README.thanks
@@ -62,3 +63,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_sbindir}/*
 %{_datadir}/etherape
 %{_mandir}/man?/*
+%{_applnkdir}/Network/Misc/*
+%{_pixmapsdir}/*
