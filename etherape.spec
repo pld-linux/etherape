@@ -15,6 +15,7 @@ BuildRequires:	gnome-libs-devel
 BuildRequires:	gtk+-devel
 BuildRequires:	libglade-devel
 BuildRequires:	libpcap-devel
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -33,6 +34,7 @@ a file as well as live from the network.
 %setup -q
 
 %build
+libtoolize --copy --force
 gettextize --copy --force
 aclocal -I macros
 autoconf
