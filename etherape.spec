@@ -1,4 +1,5 @@
 Summary:	Graphical network viewer modeled after etherman
+Summary(pl):	Graficzny monitor sieci
 Name:		etherape
 Version:	0.8.2
 Release:	1
@@ -29,6 +30,13 @@ activity graphically. Hosts and links change in size with traffic.
 Color coded protocols display. It supports ethernet, ppp and slip
 devices. It can filter traffic to be shown, and can read traffic from
 a file as well as live from the network.
+
+%description -l pl
+Etherape to graficzny monitor sieci dla uniksów. Ma tryby ether, ip
+oraz tcp, wy¶wietla aktywno¶æ sieci graficznie. Hosty i po³±czenia
+zmienij± rozmiar wraz z ruchem. Protokó³y obrazowane za pomoc±
+kolorów. Obs³uga urz±dzeñ ethernet, ppp i slip. Mo¿e filtrowaæ ruch
+jaki pokazuje, czytaæ z pliku lub bezpo¶rednio z sieci.
 
 %prep
 %setup -q
