@@ -1,0 +1,18 @@
+diff -urN etherape-0.5.6.org/configure.in etherape-0.5.6/configure.in
+--- etherape-0.5.6.org/configure.in	Thu Mar 15 08:58:28 2001
++++ etherape-0.5.6/configure.in	Thu Mar 15 08:59:03 2001
+@@ -79,12 +79,10 @@
+ # Copied from mtr to support dns.c
+ 
+ AC_CHECK_FUNC(res_init, , 
+-  AC_CHECK_LIB(bind, res_init, , 
+-   AC_CHECK_LIB(resolv, res_init, , AC_MSG_ERROR(No resolver library found))))
++   AC_CHECK_LIB(resolv, __res_init, , AC_MSG_ERROR(No resolver library found)))
+ 
+ AC_CHECK_FUNC(res_mkquery, , 
+-  AC_CHECK_LIB(bind, res_mkquery, , 
+-   AC_CHECK_LIB(resolv, res_mkquery, , AC_MSG_ERROR(No resolver library found))))
++   AC_CHECK_LIB(resolv, __res_mkquery, , AC_MSG_ERROR(No resolver library found)))
+ 
+ 
+ dnl Checks for header files.
