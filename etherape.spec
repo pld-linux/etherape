@@ -13,9 +13,6 @@ BuildRequires:	gettext-devel
 BuildRequires:	gtk+2-devel
 BuildRequires:	libgnomeui-devel
 BuildRequires:	libpcap-devel
-BuildRequires:	libtool
-Requires:	gtk+2
-Requires:	libgnomeui
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -44,13 +41,8 @@ ethernet, ppp e slip.
 %setup -q
 
 %build
-rm -f missing
-#%%{__libtoolize}
-#%%{__gettextize}
-#%%{__aclocal} -I m4
-#%%{__autoconf}
-#%%{__automake}
 %configure
+
 %{__make}
 
 %install
@@ -59,7 +51,6 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	Developmentdir=%{_desktopdir}
-#	pixmapsdir="%{_pixmapsdir}"
 
 echo "Categories=Application;Network;" >> \
 	$RPM_BUILD_ROOT%{_desktopdir}/etherape.desktop
@@ -71,9 +62,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc A* Ch* F* N* R* R* T*
+%doc AUTHORS ChangeLog FAQ NEWS README* TODO
 %attr(755,root,root) %{_bindir}/etherape
 %{_datadir}/etherape
-%{_mandir}/man1/etherape.1.gz
+%{_mandir}/man1/etherape.1*
 %{_desktopdir}/etherape.desktop
 %{_pixmapsdir}/etherape.png
