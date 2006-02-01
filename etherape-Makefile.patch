@@ -1,0 +1,11 @@
+--- etherape-0.9.4/po/Makefile.in.in.orig	2006-02-01 12:43:52.000000000 +0100
++++ etherape-0.9.4/po/Makefile.in.in	2006-02-01 12:44:45.000000000 +0100
+@@ -27,7 +27,7 @@
+ INSTALL = @INSTALL@
+ INSTALL_DATA = @INSTALL_DATA@
+ MKINSTALLDIRS = @MKINSTALLDIRS@
+-mkinstalldirs = $(SHELL) `case "$(MKINSTALLDIRS)" in /*) echo "$(MKINSTALLDIRS)" ;; *) echo "$(top_builddir)/$(MKINSTALLDIRS)" ;; esac`
++mkinstalldirs = $(SHELL) `case "$(MKINSTALLDIRS)" in /*) echo "$(MKINSTALLDIRS)" ;; *) echo "$(MKINSTALLDIRS)" ;; esac`
+ 
+ GMSGFMT = @GMSGFMT@
+ MSGFMT = @MSGFMT@
