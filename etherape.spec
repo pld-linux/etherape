@@ -20,8 +20,9 @@ BuildRequires:	libglade2
 BuildRequires:	libgnomeui-devel >= 2.0
 BuildRequires:	libpcap-devel
 BuildRequires:	pkgconfig
-Requires(post,postun):  desktop-file-utils
-Requires(post,postun):  scrollkeeper
+BuildRequires:	scrollkeeper
+Requires(post,postun):	desktop-file-utils
+Requires(post,postun):	scrollkeeper
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
