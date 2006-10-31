@@ -1,17 +1,14 @@
 --- etherape-0.9.0/etherape.desktop~	Wed Jul 14 10:10:53 2004
 +++ etherape-0.9.0/etherape.desktop	Wed Jul 14 10:11:53 2004
-@@ -2,8 +2,12 @@
+@@ -2,8 +2,11 @@
  Name=EtherApe
  Name[es]=EtherApe
  Comment=Graphical Network Monitor
--Comment[es]=Monitor Gr·fico de Red
-+Comment[es]=Monitor Gr√°fico de Red
 +Comment[pl]=Graficzny monitor sieci
  Exec=etherape
--Terminal=0
-+Terminal=false
+ Terminal=false
  Type=Application
  Icon=etherape.png
-+Categories=GTK;GNOME;Network;
+ Categories=GNOME;System;Network;
 +Encoding=UTF-8
 +# vi: encoding=utf-8

@@ -9,3 +9,15 @@
  
  GMSGFMT = @GMSGFMT@
  MSGFMT = @MSGFMT@
+--- etherape-0.9.7/Makefile.am.orig	2006-10-31 17:48:36.000000000 +0100
++++ etherape-0.9.7/Makefile.am	2006-10-31 17:48:47.000000000 +0100
+@@ -32,8 +32,7 @@
+ 	cd ../www && make
+ 
+ confdir = $(sysconfdir)/etherape
+-conf_DATA =					\
+-	services
++conf_DATA =
+ 
+ Developmentdir = $(datadir)/applications
+ Development_DATA =			\
