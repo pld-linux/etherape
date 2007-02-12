@@ -1,6 +1,6 @@
 Summary:	Graphical network viewer modeled after etherman
-Summary(pl):	Graficzny monitor sieci
-Summary(pt_BR):	Visualizador gr·fico de redes modelado como o etherman
+Summary(pl.UTF-8):   Graficzny monitor sieci
+Summary(pt_BR.UTF-8):   Visualizador gr√°fico de redes modelado como o etherman
 Name:		etherape
 Version:	0.9.7
 Release:	4
@@ -33,18 +33,18 @@ Color coded protocols display. It supports ethernet, ppp and slip
 devices. It can filter traffic to be shown, and can read traffic from
 a file as well as live from the network.
 
-%description -l pl
-Etherape to graficzny monitor sieci dla uniksÛw. Ma tryby ether, ip
-oraz tcp, wy∂wietla aktywno∂Ê sieci graficznie. Hosty i po≥±czenia
-zmieniaj± rozmiar wraz z ruchem. ProtokÛ≥y obrazowane za pomoc±
-kolorÛw. Obs≥uga urz±dzeÒ ethernet, ppp i slip. Moøe filtrowaÊ ruch
-jaki pokazuje, czytaÊ z pliku lub bezpo∂rednio z sieci.
+%description -l pl.UTF-8
+Etherape to graficzny monitor sieci dla uniks√≥w. Ma tryby ether, ip
+oraz tcp, wy≈õwietla aktywno≈õƒá sieci graficznie. Hosty i po≈ÇƒÖczenia
+zmieniajƒÖ rozmiar wraz z ruchem. Protok√≥≈Çy obrazowane za pomocƒÖ
+kolor√≥w. Obs≈Çuga urzƒÖdze≈Ñ ethernet, ppp i slip. Mo≈ºe filtrowaƒá ruch
+jaki pokazuje, czytaƒá z pliku lub bezpo≈õrednio z sieci.
 
-%description -l pt_BR
-O etherape È um monitor gr·fico de redes modelado como o etherman.
-ContÈm modos ether, ip e tcp, mostrando de forma gr·fica a atividade
-da rede: M·quinas e conexıes mudam em tamanho como o tr·fego e os
-protocolos s„o codificados por cores. O Etherape suporta dispositivos
+%description -l pt_BR.UTF-8
+O etherape √© um monitor gr√°fico de redes modelado como o etherman.
+Cont√©m modos ether, ip e tcp, mostrando de forma gr√°fica a atividade
+da rede: M√°quinas e conex√µes mudam em tamanho como o tr√°fego e os
+protocolos s√£o codificados por cores. O Etherape suporta dispositivos
 ethernet, ppp e slip.
 
 %prep
