@@ -1,6 +1,6 @@
 Summary:	Graphical network viewer modeled after etherman
-Summary(pl.UTF-8):   Graficzny monitor sieci
-Summary(pt_BR.UTF-8):   Visualizador gráfico de redes modelado como o etherman
+Summary(pl.UTF-8):	Graficzny monitor sieci
+Summary(pt_BR.UTF-8):	Visualizador gráfico de redes modelado como o etherman
 Name:		etherape
 Version:	0.9.7
 Release:	4
