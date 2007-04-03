@@ -54,6 +54,7 @@ ethernet, ppp e slip.
 %patch3 -p1
 
 %build
+%{__gettextize}
 %{__aclocal}
 %{__autoconf}
 %{__autoheader}
