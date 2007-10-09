@@ -1,0 +1,3 @@
+- update to 0.5.7,
+- removed obsoleted resolve patch,
+- regenerate libtool files for allow build in new gettext environment.
