@@ -3,7 +3,7 @@ Summary(pl.UTF-8):	Graficzny monitor sieci
 Summary(pt_BR.UTF-8):	Visualizador gráfico de redes modelado como o etherman
 Name:		etherape
 Version:	0.9.7
-Release:	5
+Release:	6
 License:	GPL
 Group:		Applications/Networking
 Source0:	http://dl.sourceforge.net/etherape/%{name}-%{version}.tar.gz
