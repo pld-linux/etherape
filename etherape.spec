@@ -19,6 +19,7 @@ BuildRequires:	gtk+2-devel
 BuildRequires:	libglade2
 BuildRequires:	libgnomeui-devel >= 2.0
 BuildRequires:	libpcap-devel
+BuildRequires:	libtool
 BuildRequires:	pkgconfig
 BuildRequires:	scrollkeeper
 Requires(post,postun):	desktop-file-utils
@@ -55,6 +56,7 @@ ethernet, ppp e slip.
 
 %build
 %{__gettextize}
+%{__libtoolize}
 %{__aclocal}
 %{__autoconf}
 %{__autoheader}
