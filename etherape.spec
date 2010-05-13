@@ -15,6 +15,7 @@ URL:		http://etherape.sourceforge.net/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	gettext-devel
+BuildRequires:	gnome-common
 BuildRequires:	gtk+2-devel
 BuildRequires:	libglade2
 BuildRequires:	libgnomeui-devel >= 2.0
