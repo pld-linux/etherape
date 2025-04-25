@@ -2,29 +2,27 @@ Summary:	Graphical network viewer modeled after etherman
 Summary(pl.UTF-8):	Graficzny monitor sieci
 Summary(pt_BR.UTF-8):	Visualizador gráfico de redes modelado como o etherman
 Name:		etherape
-Version:	0.9.7
-Release:	7
-License:	GPL
+Version:	0.9.18
+Release:	1
+License:	GPL v2+
 Group:		Applications/Networking
-Source0:	http://dl.sourceforge.net/etherape/%{name}-%{version}.tar.gz
-# Source0-md5:	7b5783090d92abe79634da4b582c6b48
+Source0:	https://downloads.sourceforge.net/etherape/%{name}-%{version}.tar.gz
+# Source0-md5:	6d6a6c03e03e2d6aae3a59cd42752ac1
 Patch1:		%{name}-desktop.patch
-Patch2:		%{name}-resolv.patch
 Patch3:		%{name}-Makefile.patch
-URL:		http://etherape.sourceforge.net/
+URL:		https://etherape.sourceforge.net/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
-BuildRequires:	gettext-tools
-BuildRequires:	gnome-common
-BuildRequires:	gtk+2-devel
-BuildRequires:	libglade2
-BuildRequires:	libgnomeui-devel >= 2.0
+BuildRequires:	gettext-tools >= 0.11.5
+BuildRequires:	glib2-devel >= 2.0
+BuildRequires:	goocanvas2-devel >= 2.0
+BuildRequires:	gtk+3-devel
 BuildRequires:	libpcap-devel
 BuildRequires:	libtool
+BuildRequires:	popt-devel
 BuildRequires:	pkgconfig
-BuildRequires:	scrollkeeper
+BuildRequires:	yelp-tools
 Requires(post,postun):	desktop-file-utils
-Requires(post,postun):	scrollkeeper
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -51,9 +49,8 @@ ethernet, ppp e slip.
 
 %prep
 %setup -q
-%patch1 -p1
-%patch2 -p1
-%patch3 -p1
+%patch -P1 -p1
+%patch -P3 -p1
 
 %build
 %{__gettextize}
@@ -70,9 +67,7 @@ ethernet, ppp e slip.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT \
-	pixmapsdir=%{_pixmapsdir} \
-	Developmentdir=%{_desktopdir}
+	DESTDIR=$RPM_BUILD_ROOT
 
 %find_lang %{name} --with-gnome
 
@@ -80,11 +75,9 @@ rm -rf $RPM_BUILD_ROOT
 rm -rf $RPM_BUILD_ROOT
 
 %post
-%scrollkeeper_update_post
 %update_desktop_database_post
 
 %postun
-%scrollkeeper_update_postun
 %update_desktop_database_postun
 
 %files -f %{name}.lang
@@ -95,4 +88,3 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/etherape.1*
 %{_desktopdir}/etherape.desktop
 %{_pixmapsdir}/etherape.png
-%{_omf_dest_dir}/%{name}
